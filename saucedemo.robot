@@ -39,3 +39,10 @@ Invalid_Password
     Input Text    //*[@id="password"]    tejfol
     Click Button    //*[@id="login-button"]
     Element Should Contain    //*[@id="login_button_container"]    Epic sadface: Username and password do not match any user in this service
+
+Empry_Password&Username
+    Open Browser    https://www.saucedemo.com/    firefox
+    Input Text    //*[@id="user-name"]    ${EMPTY}
+    Input Text    //*[@id="password"]    ${EMPTY}
+    Click Button    //*[@id="login-button"]
+    Element Should Contain    //*[@id="login_button_container"]    Epic sadface: Username is required
